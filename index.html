@@ -128,11 +128,12 @@
 	<script type="text/javascript" src="js/Calendar.js"></script>
 	<script type="text/javascript">
         var oCalendar = new Calendar();
-        oCalendar.setLocale(EN_calendar);
-		oCalendar.drawTopCalendar(document.getElementById('top_calendar'));
-        oCalendar.drawWeekDays(document.getElementById('weekdays_calendar'));
-        oCalendar.drawMonthDays(document.getElementById('month_days_calendar'));
-        oCalendar.setBehaviour();
+        oCalendar
+                .setLocale(EN_calendar)
+                .drawTopCalendar(document.getElementById('top_calendar'))
+                .drawWeekDays(document.getElementById('weekdays_calendar'))
+                .drawMonthDays(document.getElementById('month_days_calendar'))
+                .setBehaviour();
 	</script>
 </body>
 </html>
