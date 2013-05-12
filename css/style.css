@@ -1,0 +1,335 @@
+body {
+    background: url(../images/background.png) left top repeat-x;
+}
+.hidden{
+    display: none;
+}
+#cal{
+    float: left;
+    margin-right: 30px;
+}
+#evts{
+    float: left;
+    margin-top: 25px;
+}
+#top_calendar {
+    background: url(../images/calendar/top.png) left top no-repeat;
+    width: 593px;
+    height: 90px;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 33px;
+    overflow: hidden;
+}
+#top_calendar > a{
+    display: block;
+    width: 24px;
+    height: 26px;
+    background: transparent url(../img/social_media.png) left top no-repeat;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+a#prev_month{
+    display: block;
+    width: 24px;
+    height: 40px;
+    background: transparent url(../images/calendar/lowerThan.png) left top no-repeat;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+a#next_month{
+    display: block;
+    width: 24px;
+    height: 40px;
+    background: transparent url(../images/calendar/greaterThan.png) left top no-repeat;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    transition: 0.3s ease;
+}
+a#prev_month:hover{
+    background-position: 0px -40px;
+}
+a#next_month:hover{
+    background-position: 0px -40px;
+
+}
+#prev_month > img:hover{
+    filter: invert(100%);
+}
+#next_month > img:hover{
+    filter: invert(100%);
+}
+#top_calendar > span {
+    height: 84px;
+    float: left;
+    display: block;
+    line-height: 85px;
+    text-align: center;
+    font-family: "Bitter", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#top_calendar > span.month_year {
+    width: 423px;
+    text-shadow: 2px 2px #444;
+    overflow: hidden;
+}
+#top_calendar > span.month_year > span.month {
+    width: 250px;
+    display: block;
+    float: left;
+}
+#top_calendar > span.month_year > span.year {
+    width: 173px;
+    display: block;
+    float: left;
+}
+#top_calendar > span.month_year a {
+    color: #fff;
+    text-decoration: none;
+}
+#month_list, #year_list{
+    position:absolute;
+    font-family: "Bitter", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px #444;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 5px;
+    line-height: 26px;
+}
+#month_list a, #year_list a{
+    display:block;
+}
+#month_list{
+    width: 250px;
+}
+#year_list{
+    width: 173px;
+}
+#month_list > li.selected a, #year_list > li.selected a{
+    color:#ff0;
+}
+#month_list > li{
+    height: 26px;
+    background: transparent url(../images/calendar/select_month.png) left top no-repeat;
+}
+#year_list > li{
+    height: 26px;
+    background: transparent url(../images/calendar/select_year.png) left top no-repeat;
+}
+#month_list > li.last{
+    background: transparent url(../images/calendar/select_month_last.png) left top no-repeat;
+}
+#year_list > li.last{
+    background: transparent url(../images/calendar/select_year_last.png) left top no-repeat;
+}
+#top_calendar > span.left, #top_calendar > span.right {
+    text-align: center;
+    padding-top: 6px;
+}
+#top_calendar > span.left{
+    width: 62px;
+    padding-left: 25px;
+    padding-top: 25px;
+}
+#top_calendar > span.right {
+    padding-left: 35px;
+    padding-top: 25px;
+}
+#weekdays_calendar {
+    background: url(../images/calendar/week_days.png) left top no-repeat;
+    width: 593px;
+    height: 49px;
+    overflow: hidden;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+#weekdays_calendar > span {
+    height: 49px;
+    line-height: 49px;
+    display: block;
+    float: left;
+    width: 84px;
+    text-align: center;
+    font-family: "Bitter", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px #444;
+}
+
+#month_days_calendar {
+    background: url(../images/calendar/days_month.png) left top no-repeat;
+    width: 595px;
+    height: 530px;
+    padding-left: 9px;
+    padding-right: 9px;
+    overflow: hidden;
+}
+
+#month_days_calendar > div > span {
+    display: block;
+    float: left;
+    height: 83px;
+    width: 83px;
+    line-height: 83px;
+    text-align: center;
+    font-family: "Bitter", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #454545;
+    border: #b1b0bc 1px solid;
+}
+
+#month_days_calendar > div > span > a {
+    color: #454545;
+    text-decoration: none;
+    display: block;
+}
+
+#month_days_calendar > div > span > a:hover{
+    background: url(../images/calendar/hover_day.png) left top no-repeat;
+    color: #fff;
+}
+#month_days_calendar > div > span.idle > a:hover{
+    background: none;
+}
+#month_days_calendar > div > span.first {
+    border-left: none;
+}
+
+#month_days_calendar > div > span.last {
+    border-right: none;
+}
+
+#month_days_calendar > div > span.idle > a {
+    color: #aeaeae !important;
+    text-decoration: none;
+    background: none;
+}
+
+#month_days_calendar > div > span.event > a, #month_days > div > span.selected > a, #month_days > div > span.today > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#month_days_calendar > div > span.holiday > a {
+    color: #c40f11;
+    text-decoration: none;
+}
+
+#calendar {
+    float: left;
+}
+
+#events{
+    height: 388px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 633px;
+}
+
+#events ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#events ul > li {
+    width: 593px;
+    height: 89px;
+    background: url(../images/calendar/event.png) left top no-repeat;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+}
+
+#events ul > li > div > span.day {
+    display: block;
+    width: 85px;
+    height: 85px;
+    float: left;
+    font-family: "Bitter", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 85px;
+}
+
+#events ul > li > div > span.text {
+    display: block;
+    height: 85px;
+    width: 440px;
+    float: left;
+    font-family: "Bitter", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 85px;
+    padding-left: 10px;
+    padding-right: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#events ul > li > div.event_list {
+    overflow: hidden;
+}
+
+#events ul > li > div > span.right {
+    display: block;
+    padding-top: 25px;
+    height: 60px;
+    width: 40px;
+    float: left;
+}
+
+.event {
+    background: url(../images/calendar/event_in_calendar.png) 0px 0px no-repeat;
+}
+
+.selected {
+    background: url(../images/calendar/selected_date.png) 0px 0px no-repeat;
+    color: #fff !important;
+}
+
+.today {
+    background: url(../images/calendar/today.png) 0px 0px no-repeat;
+    color: #fff !important;
+}
+
+#detail{
+    margin-top: 30px;
+}
+
+#detail > .top {
+    background: url(../images/calendar/detail_top.png) left top no-repeat;
+    width: 613px;
+    height: 22px;
+}
+
+#detail > .middle {
+    background: url(../images/calendar/detail_middle.png) left top repeat-y;
+    width: 573px;
+    font-family: "Bitter", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#detail > .bottom {
+    background: url(../images/calendar/detail_bottom.png) left bottom no-repeat;
+    width: 613px;
+    height: 22px;
+}
