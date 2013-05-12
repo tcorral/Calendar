@@ -25,7 +25,6 @@ body {
     display: block;
     width: 24px;
     height: 26px;
-    background: transparent url(../img/social_media.png) left top no-repeat;
     -webkit-transition: 0.3s ease;
     -moz-transition: 0.3s ease;
     transition: 0.3s ease;

@@ -18,38 +18,38 @@
     </div>
     <script type="text/template" id="month_days_calendar_tpl">
         <div>
-            <span class="<%if(monthdays[0].className !== 'idle' && month === selected_month && year === selected_year && monthdays[0].date === selected_date){%>selected<%}%> <%if(firstdayofweek === 0){%>holiday<%}%> first <%= monthdays[0].className%> <% if (today === monthdays[0].date && today_month === month && today_year === year){%>today<%}%>">
-                <a href="#" data-date="<%= monthdays[0].date%>">
+            <span class="<%if(firstdayofweek === 0){%>holiday<%}%> first <%= monthdays[0].className%> <% if (today === monthdays[0].date && today_month === month && today_year === year){%>today<%}%>">
+                <a href="#" data-date="<%= monthdays[0].date%>" class="<%if(monthdays[0].className !== 'idle' && month === selected_month && year === selected_year && monthdays[0].date === selected_date){%>selected<%}%>">
                     <%= monthdays[0].date%>
                 </a>
             </span>
-            <span class="<%if(monthdays[1].className !== 'idle' && month === selected_month && year === selected_year && monthdays[1].date === selected_date){%>selected<%}%> <%= monthdays[1].className%> <% if (today === monthdays[1].date && today_month === month && today_year === year){%>today<%}%>">
-                <a href="#" data-date="<%= monthdays[1].date%>">
+            <span class="<%= monthdays[1].className%> <% if (today === monthdays[1].date && today_month === month && today_year === year){%>today<%}%>">
+                <a href="#" data-date="<%= monthdays[1].date%>" class="<%if(monthdays[1].className !== 'idle' && month === selected_month && year === selected_year && monthdays[1].date === selected_date){%>selected<%}%>">
                     <%= monthdays[1].date%>
                 </a>
             </span>
-            <span class="<%if(monthdays[2].className !== 'idle' && month === selected_month && year === selected_year && monthdays[2].date === selected_date){%>selected<%}%> <%= monthdays[2].className%> <% if (today === monthdays[2].date && today_month === month && today_year === year){%>today<%}%>">
-                <a href="#" data-date="<%= monthdays[2].date%>">
+            <span class="<%= monthdays[2].className%> <% if (today === monthdays[2].date && today_month === month && today_year === year){%>today<%}%>">
+                <a href="#" data-date="<%= monthdays[2].date%>" class="<%if(monthdays[2].className !== 'idle' && month === selected_month && year === selected_year && monthdays[2].date === selected_date){%>selected<%}%>">
                     <%= monthdays[2].date%>
                 </a>
             </span>
-            <span class="<%if(monthdays[3].className !== 'idle' && month === selected_month && year === selected_year && monthdays[3].date === selected_date){%>selected<%}%> <%= monthdays[3].className%> <% if (today === monthdays[3].date && today_month === month && today_year === year){%>today<%}%>">
-                <a href="#" data-date="<%= monthdays[3].date%>">
+            <span class="<%= monthdays[3].className%> <% if (today === monthdays[3].date && today_month === month && today_year === year){%>today<%}%>">
+                <a href="#" data-date="<%= monthdays[3].date%>" class="<%if(monthdays[3].className !== 'idle' && month === selected_month && year === selected_year && monthdays[3].date === selected_date){%>selected<%}%>">
                     <%= monthdays[3].date%>
                 </a>
             </span>
-            <span class="<%if(monthdays[4].className !== 'idle' && month === selected_month && year === selected_year && monthdays[4].date === selected_date){%>selected<%}%> <%= monthdays[4].className%> <% if (today === monthdays[4].date && today_month === month && today_year === year){%>today<%}%>">
-                <a href="#" data-date="<%= monthdays[4].date%>">
+            <span class="<%= monthdays[4].className%> <% if (today === monthdays[4].date && today_month === month && today_year === year){%>today<%}%>">
+                <a href="#" data-date="<%= monthdays[4].date%>" class="<%if(monthdays[4].className !== 'idle' && month === selected_month && year === selected_year && monthdays[4].date === selected_date){%>selected<%}%>">
                     <%= monthdays[4].date%>
                 </a>
             </span>
-            <span class="<%if(monthdays[5].className !== 'idle' && month === selected_month && year === selected_year && monthdays[5].date === selected_date){%>selected<%}%> <%= monthdays[5].className%> <% if (today === monthdays[5].date && today_month === month && today_year === year){%>today<%}%>">
-                <a href="#" data-date="<%= monthdays[5].date%>">
+            <span class="<%= monthdays[5].className%> <% if (today === monthdays[5].date && today_month === month && today_year === year){%>today<%}%>">
+                <a href="#" data-date="<%= monthdays[5].date%>"  <%if(monthdays[5].className !== 'idle' && month === selected_month && year === selected_year && monthdays[5].date === selected_date){%>selected<%}%>">
                     <%= monthdays[5].date%>
                 </a>
             </span>
             <span class="<%if(monthdays[6].className !== 'idle' && month === selected_month && year === selected_year && monthdays[6].date === selected_date){%>selected<%}%> <%if(firstdayofweek === 1){%>holiday<%}%> last <%= monthdays[6].className%> <% if (today === monthdays[6].date && today_month === month && today_year === year){%>today<%}%>">
-                <a href="#" data-date="<%= monthdays[6].date%>">
+                <a href="#" data-date="<%= monthdays[6].date%>" class="<%if(monthdays[6].className !== 'idle' && month === selected_month && year === selected_year && monthdays[6].date === selected_date){%>selected<%}%>">
                     <%= monthdays[6].date%>
                 </a>
             </span>
