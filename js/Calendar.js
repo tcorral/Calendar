@@ -307,6 +307,9 @@
         monthdays: monthDays.splice(0, 7) });
     }
     oMonthDaysContainer.innerHTML = sHTML;
+    if(this.month === this.selectedMonth && this.year === this.selectedYear){
+      this.selected = document.querySelector("[data-date='" + this.selectedDate + "']");
+    }
     return this;
   };
   ns.Calendar = Calendar;
