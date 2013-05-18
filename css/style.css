@@ -91,6 +91,13 @@ a#next_month:hover{
     color: #fff;
     text-decoration: none;
 }
+#change_month, #change_year{
+    display: block;
+}
+#top_calendar > span.month_year a#change_month:hover, #top_calendar > span.month_year a#change_year:hover{
+    display: block;
+    color: #ffff00;
+}
 #month_list, #year_list{
     position:absolute;
     font-family: "Bitter", sans-serif;
